@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio</title>
     <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <nav>
-            <ul>
+            <div class="hamburguesa" id="menu-movil">☰</div>
+            <ul class="menu">
                 <li><a href="#sobremi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -19,31 +26,60 @@
     </header>
 
     <section id="sobremi">
-    <h2>¡Hola! Soy Celia, desarrolladora web en formación. </h2>
+    <h2>¡Hola! Soy Celia,  <br> desarrolladora web en formación. </h2>
 
     <p>
         Estoy finalizando mi grado en Desarrollo de Aplicaciones Web y busco oportunidades para
         aplicar mis conocimientos, ganar experiencia y seguir aprendiendo del entorno profesional
         mediante proyectos reales.
-    </p>
+    </p> <br>
     <p> 
         He dedicado tiempo a perfeccionar mis habilidades de forma autónoma, lo que me ha permitido
-        crear este portfolio y compartir lo que sé hacer. Me apasiona seguir aprendiendo y tengo
+        crear este portfolio y compartir lo que sé hacer.   <br>  Me apasiona seguir aprendiendo y tengo
         muchas ideas que espero desarrollar pronto.
     </p>
 
     <a href="" target="_blank" class="btn-linkedin"> Mi LinkedIn</a>
-    <a href="" target="_blank" class="btn-github"> Mi GitHub</a>
+    <a href="https://github.com/celiagarciaf" target="_blank" class="btn-github"> Mi GitHub</a>
     </section>
     
     <section id="proyectos">
         <h2>Proyectos</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="..." class="card-img" alt="...">
+                <div class="card-body">
+                <h5>Card title 1</h5>
+                <p>Calculadora básica</p>
+                <a href="#" class="card-btn">Ver más</a>
+                </div>
+            </div>
 
+            <div class="card">
+                <img src="..." class="card-img" alt="...">
+                <div class="card-body">
+                <h5>Card title 1</h5>
+                <p>To-do list</p>
+                <a href="#" class="card-btn">Ver más</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="..." class="card-img" alt="...">
+                <div class="card-body">
+                <h5>Card title 1</h5>
+                <p>API GitHub</p>
+                <a href="#" class="card-btn">Ver más</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contacto"></section>
+    <section id="contacto">
         <h2>Contacto</h2>
+    </section>
 
     <footer></footer>
+    <script src="script.js"></script>
 </body>
 </html>
