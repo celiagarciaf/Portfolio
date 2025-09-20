@@ -2,31 +2,58 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000000;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+body {
+  background-color: #0D0D0D;
+}
+
+h1 {
+    font-family: 'Inter';
+    font-size: 45px;
+    color: #3DDC97;
+    margin-bottom: 20px;
+}
+
+#titulo {
+  min-height: 2.5em; 
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #3DDC97;
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  50% { background: transparent; }
+}
+
 h2 {
-    font-family: "Bebas Neue";
-    font-size: 60px;
-    color: #66FF99;
-    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-size: 30px;
+    color: #3DDC97;
+    margin-bottom: 20px;
 }
 
 .bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue";
   font-weight: 400;
   font-style: normal;
 }
 
 p {
-    font-family: "Intel One Mono";
-    color: #CCCCCC;
+  font-family: 'Inter';
+  color: #E0E0E0;
+  font-size: 18px;
 }
-
 
 .intel-one-mono-400 {
   font-family: "Intel One Mono", monospace;
@@ -39,7 +66,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px;
+    padding: 20px 40px;
 }
 
 .menu {
@@ -50,17 +77,21 @@ nav {
 
 .menu li a {
     text-decoration: none; 
-    color: #66FF99;          
+    color: #3DDC97;          
     font-weight: bold;     
-    font-family: "Bebas Neue";
-    font-size: 25px;
+    font-family: 'Inter';
+    font-size: 15px;
+}
+
+.menu li a:hover {
+    color:#1b7f3c
 }
 
 .hamburguesa {
     display: none; 
     font-size: 20px;
     cursor: pointer; 
-    color: #66FF99;
+    color: #3DDC97;
     font-family: "Bebas Neue";
 }
 
@@ -82,12 +113,12 @@ nav {
 
 .btn-linkedin {
     display: inline-block;
-    padding: 10px;
-    background-color: #00BFFF;
-    font-family: "Intel One Mono";
+    padding: 10px 18px;
+    background-color: #1E90FF;
+    font-family: 'Inter', sans-serif;
     color: white;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s;
     text-decoration: none;
 }
@@ -98,45 +129,162 @@ nav {
 
 .btn-github {
     display: inline-block;
-    padding: 10px;
-    background-color: #9D4EDD;
-    font-family: "Intel One Mono";
+    padding: 10px 18px;
+    background-color: #6F42C1;
+    font-family: 'Inter', sans-serif;
     color: white;    
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s;
     text-decoration: none;
     margin: 10px;
 }
 
-
 .btn-github:hover {
     background-color:#544173;
 }
 
-#sobremi {
-    padding: 10px;
-    margin: 10px;
-}
-
-#proyectos {
-    padding: 10px;
-    margin: 10px;
-}
-
-#contacto {
-    padding: 10px;
-    margin: 10px;
+section {
+  padding: 60px 10vw;
 }
 
 .cards-container {
   display: flex;               
-  justify-content: space-evenly;     
-  gap: 20px;                   
+  justify-content: center;  
+  align-items: flex-start;   
+  gap: 40px;             
   flex-wrap: wrap;             
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 h5 {
-    color: #CCCCCC;
+    color: #E6E6E6;
+    font-size: 1.3rem;
+    margin: 15px 0;
+    font-family: 'Inter';
+}
+
+.card {
+  background-color: #161b22; 
+  border-radius: 15px;
+  padding: 20px;
+  width: 600px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 12px 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  margin: 10px 5px;
+  font-size: 0.95rem;
+  
+  background: rgba(30, 144, 255, 0.2);
+  border: 1px solid rgba(30, 144, 255, 0.6);
+  color: #1E90FF;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+  background: rgba(30, 144, 255, 0.4);
+  color: white;
+  border-color: #1E90FF;
+}
+
+
+/* Sección de contacto */
+#contacto {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+#contacto p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border: 1px solid #0077ff;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0077ff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005fcc;
 }
