@@ -1,2 +1,2 @@
 # Portfolio
-This is my personal portfolio, here I will be showing my finished self-made projects and a little bit of information about me.
+Hola, soy Celia, estudiante de DAW y desarrolladora en formación. Aquí encontrarás mis proyectos personales y enlaces para explorarlos, además de un poco sobre mí.
