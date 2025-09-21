@@ -75,6 +75,21 @@
 
     <section id="contacto">
         <h2>Contacto</h2>
+        <form class="contact-form" action="https://formspree.io/f/tu-id-aqui" method="POST">
+            <div class="form-item">
+                <input type="text" id="name" name="name" placeholder="Nombre" required>
+            </div>
+
+            <div class="form-item">
+                <input type="email" id="email" name="_replyto" placeholder="Correo electrónico" required>
+            </div>
+
+            <div class="form-item">
+                <textarea name="message" id="message" placeholder="Escribe aquí tu mensaje..." required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <footer>
