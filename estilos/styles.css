@@ -101,6 +101,7 @@ nav {
         display: none; 
         flex-direction: column; 
         width: 100%; 
+        margin-left: 20px; 
     }
 
     .menu.active {
