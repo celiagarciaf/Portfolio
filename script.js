@@ -6,27 +6,33 @@ hamburguesa.addEventListener('click', () => {
 });
 
 let titulo = document.getElementById("titulo");
-let texto = `Hola, soy Celia, <br> desarrolladora web en formación.`;
+let texto = ["Hola, soy Celia,", "desarrolladora web en formación."]; // cada fragmento será un bloque
 let i = 0;
+let j = 0;
 
 let cursor = document.createElement("span");
 cursor.classList.add("cursor");
-
 titulo.innerHTML = "";
 titulo.appendChild(cursor);
 
 function typing() {
-  if (i <= texto.length) {
-    titulo.innerHTML = texto.substring(0, i);
-    titulo.appendChild(cursor);
-    i++;
-    setTimeout(typing, 80);
-  } else {
-    titulo.innerHTML = texto; 
-  }
+    if (i < texto.length) {
+        let currentText = texto[i];
+        if (j <= currentText.length) {
+            titulo.innerHTML = texto.slice(0, i).join("<br>") + "<br>" + currentText.substring(0, j);
+            titulo.appendChild(cursor);
+            j++;
+            setTimeout(typing, 80);
+        } else {
+            j = 0;
+            i++;
+            setTimeout(typing, 80);
+        }
+    }
 }
 
-window.onload = typing
+window.onload = typing;
+
 
 
 let form = document.querySelector(".contact-form");
